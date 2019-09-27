@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+	<h1>Prints</h1>
+	<br>
+	<ul class="list-group">
+		{% for print in prints %}
+			<li class="list-group-item">
+				<a href="print/{{print.id}}">
+					{{ print.title }}
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}
